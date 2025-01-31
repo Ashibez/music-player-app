@@ -2889,3 +2889,38 @@ body > .nav-toggle i.expanded {
         }
     }
 }
+
+@media screen and (max-width: 480px) {
+    .menu-options {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(100%);
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+        padding: 20px;
+        transition: transform 0.3s ease;
+        z-index: 3000;
+        background-color: #1a1a1a !important;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu-options.show {
+        transform: translateY(0);
+    }
+
+    .menu-option {
+        color: #ffffff;
+        padding: 15px;
+        margin: 5px 0;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        transition: background-color 0.2s ease;
+    }
+
+    .menu-option:hover,
+    .menu-option:active {
+        background-color: #333333;
+    }
+}
