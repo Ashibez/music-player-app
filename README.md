@@ -1,10 +1,11 @@
 # Music Player App
 
-A modern, responsive web-based music player application built with HTML, CSS, and JavaScript.
+A modern, responsive web-based music player application built with HTML, CSS, and JavaScript, featuring Spotify API integration.
 
 ## Features
 
 -   🎵 Play/pause, skip, and control music playback
+-   🎸 Spotify API integration for extended music library
 -   📱 Responsive design that works on desktop and mobile
 -   🎨 Modern and intuitive user interface
 -   📂 Local music file support
@@ -17,6 +18,7 @@ A modern, responsive web-based music player application built with HTML, CSS, an
 -   CSS3
 -   JavaScript
 -   Python (Server)
+-   Spotify Web API
 
 ## Getting Started
 
@@ -32,13 +34,26 @@ A modern, responsive web-based music player application built with HTML, CSS, an
     cd music-player-app
     ```
 
-3. Start the Python server:
+3. Configure Spotify API:
+
+    - Create a Spotify Developer account at https://developer.spotify.com
+    - Create a new application in the Spotify Developer Dashboard
+    - Copy your Client ID and Client Secret
+    - Add them to your `config.js` file:
+        ```javascript
+        const config = {
+            clientId: 'your_client_id',
+            clientSecret: 'your_client_secret'
+        };
+        ```
+
+4. Start the Python server:
 
     ```bash
     python server.py
     ```
 
-4. Open your browser and visit:
+5. Open your browser and visit:
     ```
     http://localhost:3000
     ```
@@ -49,6 +64,8 @@ A modern, responsive web-based music player application built with HTML, CSS, an
 -   Use the play/pause button to control playback
 -   Click the next/previous buttons to change songs
 -   Use the menu options for additional features
+-   Search and play music from Spotify's vast library
+-   Create and manage playlists with both local and Spotify tracks
 
 ## Contributing
 
