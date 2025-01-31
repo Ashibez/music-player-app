@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Music Player</title>
+        <link
+            rel="icon"
+            type="image/png"
+            href="https://placehold.co/32x32/1DB954/ffffff?text=M"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <div class="nav-overlay"></div>
+        <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <button class="play-button">
+            <i class="fas fa-music"></i>
+        </button>
+        <div class="container">
+            <div class="left-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item active">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-compass"></i>
+                        <span>Explore</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Favorites</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-list"></i>
+                        <span>Playlists</span>
+                    </li>
+                    <li class="nav-item theme-toggle">
+                        <i class="fas fa-moon"></i>
+                        <span>Dark Mode</span>
+                    </li>
+                    <li class="nav-item" id="spotify-login">
+                        <i class="fab fa-spotify"></i>
+                        <span>Connect Spotify</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="music-player">
+                <div class="music-header"></div>
+                <div class="music-img">
+                    <img
+                        src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745"
+                        alt="music-cover"
+                        id="cover"
+                    />
+                    <div class="music-disc"></div>
+                </div>
+                <div class="music-details">
+                    <h2 id="title">Song Title</h2>
+                    <p id="artist">Artist Name</p>
+                </div>
+                <div class="progress-area">
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="time">
+                        <span id="current">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button id="prev" class="btn">
+                        <i class="fas fa-backward"></i>
+                    </button>
+                    <button id="play" class="btn play-btn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button id="next" class="btn">
+                        <i class="fas fa-forward"></i>
+                    </button>
+                    <div class="song-menu">
+                        <i class="fas fa-ellipsis-v"></i>
+                        <div class="menu-options">
+                            <div class="menu-option">
+                                <i class="fas fa-heart"></i>
+                                <span>Add to Favorites</span>
+                            </div>
+                            <div class="menu-option">
+                                <i class="fas fa-plus"></i>
+                                <span>Add to Playlist</span>
+                            </div>
+                            <div class="menu-option">
+                                <i class="fas fa-share"></i>
+                                <span>Share</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-nav">
+                <div class="playlist-header">
+                    <h3>Local Songs</h3>
+                </div>
+                <ul id="playlist-container">
+                    <!-- Songs will be populated here by JavaScript -->
+                </ul>
+                <div class="playlist-header">
+                    <h3>Added Songs</h3>
+                </div>
+                <div id="added-songs-container">
+                    <!-- Added songs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="playlist-overlay"></div>
+        <script src="config.js" type="module"></script>
+        <script src="spotify-service.js" type="module"></script>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
