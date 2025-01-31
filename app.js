@@ -174,3 +174,34 @@ class MusicApp {
 document.addEventListener('DOMContentLoaded', () => {
     new MusicApp();
 });
+
+const songs = [
+    {
+        title: 'First Song',
+        artist: 'Artist One',
+        duration: '3:45',
+        file: './sound/first.mp3',
+        cover: 'https://picsum.photos/200/200?random=1'
+    },
+    {
+        title: 'Second Song',
+        artist: 'Artist Two',
+        duration: '4:30',
+        file: './sound/second.mp3',
+        cover: 'https://picsum.photos/200/200?random=2'
+    },
+    {
+        title: 'Third Song',
+        artist: 'Artist Three',
+        duration: '3:15',
+        file: './sound/third.mp3',
+        cover: 'https://picsum.photos/200/200?random=3'
+    },
+    {
+        title: 'Fourth Song',
+        artist: 'Artist Four',
+        duration: '5:00',
+        file: './sound/fourth.mp3',
+        cover: 'https://picsum.photos/200/200?random=4'
+    }
+];
