@@ -3408,3 +3408,244 @@ body > .nav-toggle i.expanded {
         font-size: 1.3rem;
     }
 }
+
+/* ... existing code ... */
+
+/* Disable scrolling on mobile */
+@media (max-width: 768px) {
+    html,
+    body {
+        overflow: hidden !important;
+        height: 100% !important;
+    }
+
+    .container {
+        overflow: hidden !important;
+    }
+}
+
+/* Make smaller screens (phones) look like larger screens (tablets) */
+@media (max-width: 768px) {
+    /* Apply tablet styles to smaller screens */
+    .container {
+        padding: 20px 40px !important; /* Same as tablet padding */
+    }
+
+    .music-player {
+        padding: 20px !important; /* Same as tablet padding */
+    }
+
+    .player-content {
+        max-width: 400px !important; /* Same as tablet width */
+        padding: 25px !important; /* Same as tablet padding */
+    }
+
+    .music-details h2 {
+        font-size: 1.8rem !important; /* Same as tablet font size */
+    }
+
+    .music-details p {
+        font-size: 1.1rem !important; /* Same as tablet font size */
+    }
+
+    .progress-area {
+        max-width: 300px !important; /* Same as tablet width */
+    }
+
+    .controls {
+        gap: 30px !important; /* Same as tablet spacing */
+    }
+
+    .btn {
+        font-size: 1.3rem !important; /* Same as tablet font size */
+    }
+
+    .play-btn {
+        width: 55px !important; /* Same as tablet size */
+        height: 55px !important; /* Same as tablet size */
+        font-size: 1.5rem !important; /* Same as tablet font size */
+    }
+
+    .time {
+        font-size: 0.9rem !important; /* Same as tablet font size */
+    }
+
+    /* Adjust playlist item layout */
+    .playlist-item {
+        padding: 12px 15px !important; /* Same as tablet padding */
+    }
+
+    .playlist-item img {
+        width: 48px !important; /* Same as tablet size */
+        height: 48px !important; /* Same as tablet size */
+    }
+
+    .playlist-item .song-info h4 {
+        font-size: 1rem !important; /* Same as tablet font size */
+    }
+
+    .playlist-item .song-info p {
+        font-size: 0.9rem !important; /* Same as tablet font size */
+    }
+
+    /* Adjust modal appearance */
+    .modal-content {
+        width: 90% !important; /* Same as tablet width */
+        max-width: 500px !important; /* Same as tablet max-width */
+    }
+
+    .modal-header h2 {
+        font-size: 1.4rem !important; /* Same as tablet font size */
+    }
+
+    /* Adjust menu options */
+    .menu-options {
+        width: 90% !important; /* Same as tablet width */
+        max-width: 400px !important; /* Same as tablet max-width */
+    }
+
+    .menu-option {
+        padding: 12px 16px !important; /* Same as tablet padding */
+        font-size: 1rem !important; /* Same as tablet font size */
+    }
+
+    /* Adjust search bar */
+    .search-container {
+        width: 100% !important; /* Same as tablet width */
+    }
+
+    #search-input {
+        width: 100% !important; /* Same as tablet width */
+        padding: 12px !important; /* Same as tablet padding */
+        font-size: 1rem !important; /* Same as tablet font size */
+    }
+
+    #search-button {
+        width: auto !important; /* Same as tablet width */
+        padding: 12px 20px !important; /* Same as tablet padding */
+        font-size: 1rem !important; /* Same as tablet font size */
+    }
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 480px) {
+    /* Ensure consistency with tablet styles */
+    .container {
+        padding: 20px 30px !important; /* Slightly smaller padding */
+    }
+
+    .player-content {
+        padding: 20px !important; /* Slightly smaller padding */
+    }
+
+    .music-details h2 {
+        font-size: 1.6rem !important; /* Slightly smaller font size */
+    }
+
+    .music-details p {
+        font-size: 1rem !important; /* Slightly smaller font size */
+    }
+
+    .play-btn {
+        width: 50px !important; /* Slightly smaller size */
+        height: 50px !important; /* Slightly smaller size */
+    }
+
+    .playlist-item {
+        padding: 10px 12px !important; /* Slightly smaller padding */
+    }
+
+    .playlist-item img {
+        width: 40px !important; /* Slightly smaller size */
+        height: 40px !important; /* Slightly smaller size */
+    }
+
+    .playlist-item .song-info h4 {
+        font-size: 0.95rem !important; /* Slightly smaller font size */
+    }
+
+    .playlist-item .song-info p {
+        font-size: 0.85rem !important; /* Slightly smaller font size */
+    }
+
+    .menu-options {
+        width: 95% !important; /* Slightly smaller width */
+    }
+
+    .menu-option {
+        padding: 10px 14px !important; /* Slightly smaller padding */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Match larger mobile screens for music list */
+    .playlist-item {
+        padding: 12px 15px !important; /* Match larger screens */
+        margin-bottom: 12px !important;
+        height: auto !important;
+    }
+
+    .playlist-item img {
+        width: 48px !important; /* Match larger screens */
+        height: 48px !important;
+        margin-right: 12px !important;
+    }
+
+    .playlist-item .song-info h4 {
+        font-size: 1rem !important; /* Match larger screens */
+        margin-bottom: 4px !important;
+    }
+
+    .playlist-item .song-info p {
+        font-size: 0.9rem !important; /* Match larger screens */
+    }
+
+    .playlist-item .duration {
+        font-size: 0.9rem !important; /* Match larger screens */
+    }
+
+    /* Increase top-right music icon size */
+    .music-icon {
+        font-size: 1.8rem !important; /* Increased size to match tablet */
+        width: 45px !important;
+        height: 45px !important;
+        padding: 10px !important;
+    }
+
+    /* Adjust menu options to match larger screens */
+    .menu-options {
+        width: 90% !important; /* Match larger screens */
+        padding: 20px !important;
+    }
+
+    .menu-option {
+        padding: 12px 16px !important; /* Match larger screens */
+        font-size: 1rem !important;
+        margin: 5px 0 !important;
+    }
+
+    /* Ensure song menu icon is properly sized */
+    .playlist-item .song-menu i {
+        font-size: 1.5rem !important; /* Increased size */
+    }
+}
+
+/* Additional adjustments for very small screens (below 380px) */
+@media (max-width: 380px) {
+    .playlist-item {
+        padding: 12px !important;
+    }
+
+    .playlist-item img {
+        width: 45px !important;
+        height: 45px !important;
+        margin-right: 10px !important;
+    }
+
+    .music-icon {
+        font-size: 1.6rem !important;
+        width: 40px !important;
+        height: 40px !important;
+        padding: 8px !important;
+    }
+}
