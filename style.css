@@ -2924,3 +2924,330 @@ body > .nav-toggle i.expanded {
         background-color: #333333;
     }
 }
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    /* Adjust container padding and layout */
+    .container {
+        padding: 20px 15px !important;
+        overflow-y: hidden !important; /* Hide vertical scrollbar */
+        -ms-overflow-style: none !important; /* Hide scrollbar IE and Edge */
+        scrollbar-width: none !important; /* Hide scrollbar Firefox */
+    }
+
+    .container::-webkit-scrollbar {
+        display: none !important; /* Hide scrollbar Chrome, Safari, Opera */
+    }
+
+    /* Adjust toast notifications for better mobile display */
+    .toast {
+        width: 90% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        bottom: 20px !important;
+        font-size: 0.9rem !important;
+        padding: 12px 20px !important;
+        border-radius: 12px !important;
+        background: rgba(0, 0, 0, 0.9) !important;
+        color: #ffffff !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+        z-index: 9999 !important;
+    }
+
+    .toast.show {
+        animation: toastIn 0.3s ease forwards !important;
+    }
+
+    @keyframes toastIn {
+        from {
+            transform: translate(-50%, 100%) !important;
+            opacity: 0 !important;
+        }
+        to {
+            transform: translate(-50%, 0) !important;
+            opacity: 1 !important;
+        }
+    }
+
+    .music-player {
+        padding: 20px 10px !important;
+        height: auto !important;
+        min-height: 100vh;
+    }
+
+    .player-content {
+        max-width: 100% !important;
+        padding: 20px !important;
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+    }
+
+    .music-details h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .music-details p {
+        font-size: 1rem !important;
+    }
+
+    .progress-area {
+        max-width: 90% !important;
+    }
+
+    .controls {
+        gap: 20px !important;
+        left: 0 !important;
+    }
+
+    .btn {
+        font-size: 1.2rem !important;
+        padding: 10px !important;
+    }
+
+    .play-btn {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.4rem !important;
+    }
+
+    .time {
+        font-size: 0.9rem !important;
+    }
+
+    /* Adjust playlist item layout */
+    .playlist-item {
+        padding: 10px !important;
+        margin-bottom: 10px !important;
+        height: auto !important;
+    }
+
+    .playlist-item img {
+        width: 40px !important;
+        height: 40px !important;
+        margin-right: 10px !important;
+    }
+
+    .playlist-item .song-info h4 {
+        font-size: 1rem !important;
+    }
+
+    .playlist-item .song-info p {
+        font-size: 0.9rem !important;
+    }
+
+    .playlist-item .duration {
+        font-size: 0.8rem !important;
+    }
+
+    /* Improve modal appearance */
+    .modal-content {
+        width: 90% !important;
+        max-height: 80vh !important;
+        border-radius: 15px !important;
+        padding: 15px !important;
+    }
+
+    .modal-header h2 {
+        font-size: 1.2rem !important;
+    }
+
+    .modal-body {
+        padding: 15px !important;
+    }
+
+    /* Adjust menu options for mobile */
+    .menu-options {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-width: none !important;
+        border-radius: 20px 20px 0 0 !important;
+        padding: 20px !important;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+        z-index: 3000;
+    }
+
+    .menu-options.show {
+        transform: translateY(0);
+    }
+
+    .menu-option {
+        padding: 15px !important;
+        font-size: 1.1rem !important;
+    }
+
+    /* Improve navigation for mobile */
+    .left-nav {
+        width: 100% !important;
+        height: 100vh !important;
+        position: fixed !important;
+        top: 0;
+        left: -100%;
+        transition: left 0.3s ease;
+        z-index: 2000;
+    }
+
+    .left-nav.expanded {
+        left: 0;
+    }
+
+    .nav-toggle {
+        display: block !important;
+        position: fixed;
+        top: 20px;
+        left: 15px;
+        z-index: 2100;
+    }
+
+    .nav-overlay.show {
+        display: block;
+        opacity: 1;
+    }
+
+    /* Adjust right navigation for mobile */
+    .right-nav {
+        width: 100% !important;
+        height: 100vh !important;
+        position: fixed !important;
+        top: 0;
+        right: -100%;
+        transition: right 0.3s ease;
+        z-index: 2000;
+    }
+
+    .right-nav.expanded {
+        right: 0;
+    }
+
+    /* Improve search bar appearance */
+    .search-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #search-input {
+        width: 100% !important;
+    }
+
+    #search-button {
+        width: 100% !important;
+    }
+
+    /* Adjust toast notifications */
+    .toast {
+        width: 90% !important;
+        left: 5% !important;
+        bottom: 10px !important;
+        font-size: 0.9rem !important;
+        padding: 10px 15px !important;
+    }
+
+    /* Improve playlist overlay */
+    .playlist-overlay.show {
+        display: block;
+    }
+
+    /* Adjust frequency bars for active playlist items */
+    .playlist-item.active .frequency-bars {
+        left: 5px !important;
+    }
+
+    .playlist-item.active .frequency-bars span {
+        width: 2px !important;
+    }
+
+    /* Fix notification toast */
+    .toast {
+        position: fixed !important;
+        width: 90% !important;
+        left: 50% !important;
+        transform: translate(-50%, 100%) !important;
+        bottom: 20px !important;
+        font-size: 0.9rem !important;
+        padding: 12px 20px !important;
+        border-radius: 12px !important;
+        background: var(--background-secondary) !important;
+        color: var(--text-primary) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+        z-index: 9999 !important;
+        opacity: 0 !important;
+        transition: transform 0.3s ease, opacity 0.3s ease !important;
+    }
+
+    .toast.show {
+        transform: translate(-50%, 0) !important;
+        opacity: 1 !important;
+    }
+
+    /* Fix menu options for playlist items */
+    .playlist-item .menu-options {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-width: none !important;
+        border-radius: 20px 20px 0 0 !important;
+        padding: 20px !important;
+        transform: translateY(100%) !important;
+        transition: transform 0.3s ease !important;
+        z-index: 3000 !important;
+        background-color: var(--background-secondary) !important;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .playlist-item .menu-options.show {
+        transform: translateY(0) !important;
+    }
+
+    .playlist-item .menu-option {
+        color: var(--text-primary) !important;
+        padding: 15px !important;
+        margin: 5px 0 !important;
+        border-radius: 10px !important;
+        font-size: 1.1rem !important;
+        transition: background-color 0.2s ease !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+
+    .playlist-item .menu-option:hover,
+    .playlist-item .menu-option:active {
+        background-color: var(--background-hover) !important;
+    }
+
+    .playlist-item .menu-option i {
+        font-size: 1.2rem !important;
+        width: 24px !important;
+        text-align: center !important;
+    }
+
+    .playlist-item .menu-option span {
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* ... existing code ... */
+
+    .playlist-item .menu-options {
+        padding: 16px !important;
+    }
+
+    .playlist-item .menu-option {
+        padding: 12px !important;
+        font-size: 1rem !important;
+    }
+
+    .playlist-item .menu-option i {
+        font-size: 1.1rem !important;
+    }
+
+    .playlist-item .menu-option span {
+        font-size: 0.95rem !important;
+    }
+}
