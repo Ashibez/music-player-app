@@ -3410,7 +3410,6 @@ body > .nav-toggle i.expanded {
 }
 
 /* ... existing code ... */
-
 /* Disable scrolling on mobile */
 @media (max-width: 768px) {
     html,
@@ -3714,5 +3713,63 @@ body > .nav-toggle i.expanded {
         min-width: 50px !important;
         padding: 20px 5px !important;
         border-radius: 50% !important;
+    }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    /* Ensure left-nav is completely hidden by default */
+    .left-nav {
+        position: fixed !important;
+        top: 0 !important;
+        left: -100% !important; /* Completely off-screen */
+        width: 80% !important; /* Adjust width as needed */
+        height: 100vh !important;
+        background: var(--nav-bg) !important;
+        backdrop-filter: blur(10px) !important;
+        z-index: 2000 !important;
+        transition: left 0.3s ease;
+        box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden !important; /* Prevent any overflow */
+    }
+
+    /* Show left-nav when expanded */
+    .left-nav.expanded {
+        left: 0 !important; /* Slide into view */
+    }
+
+    /* Ensure no unintended margin or padding is causing the bar */
+    body,
+    html,
+    .container {
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+
+    /* Remove any leftover spacing from the left-nav */
+    .container {
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    /* Hide the left-nav overlay when not expanded */
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        z-index: 1999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .nav-overlay.show {
+        display: block;
+        opacity: 1;
     }
 }
