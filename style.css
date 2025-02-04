@@ -3773,3 +3773,173 @@ body > .nav-toggle i.expanded {
         opacity: 1;
     }
 }
+
+/* Styles for much smaller mobile screens (e.g., phones under 480px) */
+@media (max-width: 480px) {
+    /* Explore modal adjustments */
+    .explore-modal .modal-content {
+        width: 95% !important;
+        max-width: 300px !important;
+        padding: 15px !important;
+    }
+
+    .explore-modal .modal-body {
+        max-height: 60vh !important;
+        overflow-y: auto !important;
+    }
+
+    /* Ensure only one vertical bar in the explore modal */
+    .explore-modal .category-grid,
+    .explore-modal .mood-grid {
+        grid-template-columns: 1fr !important; /* Single column layout */
+    }
+
+    .explore-modal .category-card,
+    .explore-modal .mood-card {
+        padding: 15px !important;
+        text-align: center;
+    }
+
+    /* Increase the height of the music list modal */
+    .song-list-modal .modal-content {
+        width: 95% !important;
+        max-width: 300px !important;
+        padding: 15px !important;
+        max-height: 80vh !important; /* Increased height */
+    }
+
+    .song-list-modal .modal-body {
+        max-height: 70vh !important;
+        overflow-y: auto !important;
+    }
+
+    /* Adjust music list item height to match tablets */
+    .song-list-modal .playlist-item {
+        padding: 15px !important;
+        height: 70px !important; /* Increased height */
+    }
+
+    .song-list-modal .playlist-item img {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .song-list-modal .playlist-item .song-info h4 {
+        font-size: 1rem !important;
+    }
+
+    .song-list-modal .playlist-item .song-info p {
+        font-size: 0.9rem !important;
+    }
+
+    /* Increase the size of the music icon at the top right */
+    .play-button {
+        font-size: 2.5rem !important; /* Larger icon */
+        padding: 15px !important;
+    }
+
+    /* Remove the background from the hamburger icon */
+    .nav-toggle {
+        background: none !important;
+        box-shadow: none !important;
+        padding: 10px !important;
+    }
+
+    .nav-toggle i {
+        font-size: 1.8rem !important; /* Larger icon */
+        color: var(--text-primary) !important;
+    }
+}
+
+/* Styles for very small screens (below 380px) */
+@media (max-width: 380px) {
+    /* Explore modal adjustments */
+    .explore-modal .modal-content {
+        width: 98% !important;
+        max-width: 280px !important;
+        padding: 12px !important;
+    }
+
+    .explore-modal .modal-body {
+        max-height: 65vh !important;
+    }
+
+    .explore-modal .category-grid,
+    .explore-modal .mood-grid {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
+
+    .explore-modal .category-card,
+    .explore-modal .mood-card {
+        padding: 12px !important;
+        text-align: center;
+    }
+
+    /* Music list modal adjustments */
+    .song-list-modal .modal-content {
+        width: 98% !important;
+        max-width: 280px !important;
+        padding: 12px !important;
+        max-height: 85vh !important;
+    }
+
+    .song-list-modal .modal-body {
+        max-height: 75vh !important;
+    }
+
+    .song-list-modal .playlist-item {
+        padding: 12px !important;
+        height: 65px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .song-list-modal .playlist-item img {
+        width: 48px !important;
+        height: 48px !important;
+        margin-right: 10px !important;
+    }
+
+    .song-list-modal .playlist-item .song-info h4 {
+        font-size: 0.95rem !important;
+        margin-bottom: 3px !important;
+    }
+
+    .song-list-modal .playlist-item .song-info p {
+        font-size: 0.85rem !important;
+    }
+
+    /* Icon size adjustments */
+    .play-button {
+        font-size: 2.2rem !important;
+        padding: 12px !important;
+        right: 10px !important;
+        top: 10px !important;
+    }
+
+    .nav-toggle {
+        padding: 8px !important;
+        top: 12px !important;
+        left: 8px !important;
+    }
+
+    .nav-toggle i {
+        font-size: 1.6rem !important;
+    }
+
+    /* Menu adjustments */
+    .menu-options {
+        padding: 15px !important;
+    }
+
+    .menu-option {
+        padding: 10px !important;
+        font-size: 0.95rem !important;
+        margin: 4px 0 !important;
+    }
+
+    .menu-option i {
+        font-size: 1.1rem !important;
+        width: 20px !important;
+    }
+}
